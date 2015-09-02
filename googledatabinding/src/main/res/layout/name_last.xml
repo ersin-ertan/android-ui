@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android = "http://schemas.android.com/apk/res/android" xmlns:bind = "http://schemas.android.com/apk/res-auto"
+	>
+
+	<data class = "Changed">
+
+		<import type = "android.graphics.Color"/>
+
+		<import
+			alias = "MyColor" type = "com.nullcognition.googledatabinding.Color"
+			/>
+
+		<import
+			alias = "Format" type = "com.nullcognition.googledatabinding.User"
+			/>
+
+		<variable
+			name = "user" type = "com.nullcognition.googledatabinding.User"
+			/>
+
+		<variable
+			name = "handler" type = "com.nullcognition.googledatabinding.MyClickHandler"
+			/>
+
+		<variable
+			name = "note" type = "String"
+			/>
+		<!--If the variable is a base class or interface that does not implement the Observable* interface, the variables will not be observed!-->
+	</data>
+
+	<LinearLayout
+		android:background = "#8cff72"
+		android:layout_height = "match_parent"
+		android:layout_width = "match_parent"
+		android:orientation = "vertical"
+		>
+
+		<TextView
+			android:layout_height = "wrap_content"
+			android:layout_width = "wrap_content"
+			android:text = "DataBinding00"
+			/>
+
+		<TextView
+			android:background = "@{Color.MAGENTA}"
+			android:layout_height = "wrap_content"
+			android:layout_width = "wrap_content"
+			android:onClick = "@{user.isOn ? handler.isOn : handler.isOff}"
+			android:text = "@{Format.addMr(user.firstName)}"
+			/>
+
+		<include
+			bind:user = "@{user}"
+			layout = "@layout/last"
+			/>
+
+	</LinearLayout>
+
+</layout>

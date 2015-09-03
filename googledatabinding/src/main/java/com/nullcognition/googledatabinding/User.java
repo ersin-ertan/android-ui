@@ -14,5 +14,5 @@ public class User{
 		this.isOn = isOn;
 	}
 
-	public static String addMr(String string){return "Mr. " + string;}
+	public static String externalModification(String string){return "Mr. " + string;}
 }

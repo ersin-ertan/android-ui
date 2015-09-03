@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import com.nullcognition.googledatabinding.databinding.Changed;
 
 
-public class DataBinding00 extends Fragment{
+public class Fragment00 extends Fragment{
 
 
 	User           user;
@@ -20,14 +20,14 @@ public class DataBinding00 extends Fragment{
 	//	NameLastBinding binding; // see data layout for name change syntax
 	Changed        binding;
 
-	public static final String TAG = DataBinding00.class.getSimpleName();
-	public DataBinding00(){}
+	public static final String TAG = Fragment00.class.getSimpleName();
+	public Fragment00(){}
 
-	public static DataBinding00 newInstance(){
+	public static Fragment00 newInstance(){
 
 		Bundle args = new Bundle();
 
-		DataBinding00 fragment = new DataBinding00();
+		Fragment00 fragment = new Fragment00();
 		fragment.setArguments(args);
 		return fragment;
 	}
@@ -35,11 +35,13 @@ public class DataBinding00 extends Fragment{
 	@Override public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState){
 		final View rootView = inflater.inflate(R.layout.name_last, container, false);
 
+		// another way to bind
 //		NameLastBinding binding  = NameLastBinding.inflate(inflater, container, false);
 		binding = DataBindingUtil.setContentView(getActivity(), R.layout.name_last);
 
 		user = new User("First", "Last", true);
 		binding.setUser(user);
+		// click handler allows for custom logic to be call due to textviews onClick calling it
 		handler = new MyClickHandler();
 		binding.setHandler(handler);
 

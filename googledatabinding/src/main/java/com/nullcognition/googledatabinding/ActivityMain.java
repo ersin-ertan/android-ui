@@ -1,7 +1,6 @@
 package com.nullcognition.googledatabinding;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,8 +25,8 @@ public class ActivityMain extends Activity{
 	public boolean onOptionsItemSelected(MenuItem item){
 		android.app.FragmentTransaction ft = getFragmentManager().beginTransaction();
 		int                             id = item.getItemId();
-		if(id == R.id.action_settings){
-			ft.add(R.id.frameLayout, DataBinding00.newInstance(), DataBinding00.TAG).commit();
+		if(id == R.id.action_load_fragment00){
+			ft.add(R.id.frameLayout, Fragment00.newInstance(), Fragment00.TAG).commit();
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

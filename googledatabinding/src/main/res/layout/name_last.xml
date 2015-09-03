@@ -3,11 +3,14 @@
 	>
 
 	<data class = "Changed">
-
-		<import type = "android.graphics.Color"/>
+		<!-- changed from NameLastBinding-->
 
 		<import
-			alias = "MyColor" type = "com.nullcognition.googledatabinding.Color"
+			alias = "AliasColor" type = "android.graphics.Color"
+			/>
+
+		<import
+			type = "com.nullcognition.googledatabinding.Color"
 			/>
 
 		<import
@@ -41,14 +44,16 @@
 			android:text = "DataBinding00"
 			/>
 
+		<!-- Referencing the class Colors field-->
 		<TextView
-			android:background = "@{Color.MAGENTA}"
+			android:background = "@{AliasColor.MAGENTA}"
 			android:layout_height = "wrap_content"
 			android:layout_width = "wrap_content"
 			android:onClick = "@{user.isOn ? handler.isOn : handler.isOff}"
-			android:text = "@{Format.addMr(user.firstName)}"
+			android:text = "@{Format.externalModification(user.firstName)}"
 			/>
 
+		<!-- include binding the user variable from this layout to the included-->
 		<include
 			bind:user = "@{user}"
 			layout = "@layout/last"

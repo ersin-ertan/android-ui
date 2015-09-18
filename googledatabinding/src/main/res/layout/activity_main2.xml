@@ -36,12 +36,14 @@
 			/>
 		<!-- can't have null coaleser on the ObservableField types, maybe-->
 
-		<!--<TextView-->
-		<!--android:layout_height = "wrap_content"-->
-		<!--android:layout_width = "match_parent"-->
-		<!--android:text = "@{sofh.age}"-->
-		<!--android:textAppearance = "?android:attr/textAppearanceLarge"-->
-		<!--/>-->
+		<TextView
+		android:layout_height = "wrap_content"
+		android:layout_width = "match_parent"
+		android:text = "@{String.valueOf((Integer)sofh.age)}"
+		android:textAppearance = "?android:attr/textAppearanceLarge"
+		/>
+		<!-- turns out that you needed to cast it to the primitive class type first then string.valof-->
+
 		<!--tried to wrap the int observable field in String.valueOf, to display in textview and tried importing string
 		both did not work, even tried with the Integer class,
 		even tried making a custom immport and method to take in the obsInt and return a string but

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android = "http://schemas.android.com/apk/res/android">
+
+	<data>
+
+		<variable
+			name = "someObservable"
+			type = "com.nullcognition.googledatabinding.SomeObservable"
+			/>
+	</data>
+
+	<LinearLayout
+		android:layout_height = "match_parent"
+		android:layout_width = "match_parent"
+		android:orientation = "vertical"
+		>
+
+		<TextView
+			android:layout_height = "wrap_content"
+			android:layout_width = "match_parent"
+			android:text = "@{someObservable.firstName ?? `default from xml`}"
+			android:textAppearance = "?android:attr/textAppearanceLarge"
+			/>
+
+		<Button
+			android:layout_width = "wrap_content"
+			android:layout_height = "wrap_content"
+			android:text = "Change SomeObservable variable"
+			android:id = "@+id/btn_chgVar"
+			/>
+
+	</LinearLayout>
+
+</layout>

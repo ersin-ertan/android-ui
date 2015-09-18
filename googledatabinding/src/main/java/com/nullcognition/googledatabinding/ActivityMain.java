@@ -1,6 +1,7 @@
 package com.nullcognition.googledatabinding;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,6 +29,9 @@ public class ActivityMain extends Activity{
 		if(id == R.id.action_load_fragment00){
 			ft.add(R.id.frameLayout, Fragment00.newInstance(), Fragment00.TAG).commit();
 			return true;
+		}
+		else if(id == R.id.action_new_activity){
+			startActivity(new Intent(this, Main2Activity.class));
 		}
 		return super.onOptionsItemSelected(item);
 	}

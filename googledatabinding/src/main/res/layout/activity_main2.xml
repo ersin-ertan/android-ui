@@ -3,9 +3,15 @@
 
 	<data>
 
+
 		<variable
 			name = "someObservable"
 			type = "com.nullcognition.googledatabinding.SomeObservable"
+			/>
+
+		<variable
+			name = "sofh"
+			type = "com.nullcognition.googledatabinding.SomeObservableFieldHolder"
 			/>
 	</data>
 
@@ -18,15 +24,35 @@
 		<TextView
 			android:layout_height = "wrap_content"
 			android:layout_width = "match_parent"
-			android:text = "@{someObservable.firstName ?? `default from xml`}"
+			android:text = "@{someObservable.firstName ?? `default from xml someobservable`}"
 			android:textAppearance = "?android:attr/textAppearanceLarge"
 			/>
 
-		<Button
-			android:layout_width = "wrap_content"
+		<TextView
 			android:layout_height = "wrap_content"
-			android:text = "Change SomeObservable variable"
+			android:layout_width = "match_parent"
+			android:text = "@{sofh.lastName ?? `default from xml sofh text`}"
+			android:textAppearance = "?android:attr/textAppearanceLarge"
+			/>
+		<!-- can't have null coaleser on the ObservableField types, maybe-->
+
+		<!--<TextView-->
+		<!--android:layout_height = "wrap_content"-->
+		<!--android:layout_width = "match_parent"-->
+		<!--android:text = "@{sofh.age}"-->
+		<!--android:textAppearance = "?android:attr/textAppearanceLarge"-->
+		<!--/>-->
+		<!--tried to wrap the int observable field in String.valueOf, to display in textview and tried importing string
+		both did not work, even tried with the Integer class,
+		even tried making a custom immport and method to take in the obsInt and return a string but
+		did not work-->
+
+
+		<Button
 			android:id = "@+id/btn_chgVar"
+			android:layout_height = "wrap_content"
+			android:layout_width = "wrap_content"
+			android:text = "Change SomeObservable variable"
 			/>
 
 	</LinearLayout>

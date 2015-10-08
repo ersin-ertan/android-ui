@@ -1,1 +1,1 @@
-include ':app', ':googledatabinding'
+include ':app', ':googledatabinding', ':effectiveandroidui'

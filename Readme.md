@@ -14,4 +14,4 @@
      - [Satellite](https://github.com/konmik/satellite) evaluating
 
 - [Pedrovgs](https://github.com/pedrovgs)
-     - [EffectiveAndroidUI](https://github.com/pedrovgs/EffectiveAndroidUI/) evaluating
+     - [EffectiveAndroidUI](https://github.com/pedrovgs/EffectiveAndroidUI/) [Example](https://github.com/ersin-ertan/android-ui/tree/master/effectiveandroidui)

@@ -3,9 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-ui.iml" filepath="$PROJECT_DIR$/android-ui.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/effectiveandroidui/effectiveandroidui.iml" filepath="$PROJECT_DIR$/effectiveandroidui/effectiveandroidui.iml" />
       <module fileurl="file://$PROJECT_DIR$/googledatabinding/googledatabinding.iml" filepath="$PROJECT_DIR$/googledatabinding/googledatabinding.iml" />
+      <module fileurl="file://$PROJECT_DIR$/joebirchmvvm/joebirchmvvm.iml" filepath="$PROJECT_DIR$/joebirchmvvm/joebirchmvvm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mosby/mosby.iml" filepath="$PROJECT_DIR$/mosby/mosby.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice00/practice00.iml" filepath="$PROJECT_DIR$/practice00/practice00.iml" />
     </modules>
   </component>
 </project>

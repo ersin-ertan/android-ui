@@ -15,3 +15,6 @@
 
 - [Pedrovgs](https://github.com/pedrovgs)
      - [EffectiveAndroidUI](https://github.com/pedrovgs/EffectiveAndroidUI/)-[Example](https://github.com/ersin-ertan/android-ui/tree/master/effectiveandroidui)
+
+- [Hitherejoe](https://github.com/hitherejoe)
+    - [MVVM_Hacker_News](https://github.com/hitherejoe/MVVM_Hacker_News)

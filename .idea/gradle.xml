@@ -9,9 +9,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/effectiveandroidui" />
             <option value="$PROJECT_DIR$/googledatabinding" />
+            <option value="$PROJECT_DIR$/joebirchmvvm" />
+            <option value="$PROJECT_DIR$/mosby" />
+            <option value="$PROJECT_DIR$/practice00" />
           </set>
         </option>
       </GradleProjectSettings>

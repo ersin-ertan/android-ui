@@ -15,11 +15,12 @@ import android.view.ViewGroup;
 import com.hannesdorfmann.mosby.mvp.viewstate.lce.LceViewState;
 import com.hannesdorfmann.mosby.mvp.viewstate.lce.MvpLceViewStateFragment;
 import com.hannesdorfmann.mosby.mvp.viewstate.lce.data.RetainingLceViewState;
+import com.nullcognition.mosby.MainActivity;
 import com.nullcognition.mosby.R;
-import com.nullcognition.mosby.SampleModule;
+import com.nullcognition.mosby.di.repo.ReposComponent;
+import com.nullcognition.mosby.di.repo.ReposModule;
 import com.nullcognition.mosby.model.ErrorMessageDeterminer;
 import com.nullcognition.mosby.model.Repo;
-import com.nullcognition.mosby.model.ReposAdapter;
 
 import java.util.List;
 
@@ -35,11 +36,13 @@ public class ReposFragment
 	@Bind(R.id.recyclerView) RecyclerView           recyclerView;
 	@Inject                  ErrorMessageDeterminer errorMessageDeterminer;
 	ReposComponent reposComponent;
-	ReposAdapter   adapter;
+	@Inject ReposAdapter adapter;
 
 	protected void injectDependencies(){
-		reposComponent =
-				DaggerReposComponent.builder().sampleModule(new SampleModule(getActivity())).build();
+		if(reposComponent == null){
+			reposComponent = ((MainActivity) getActivity()).getActivityComponent()
+			                                               .plus(new ReposModule());
+		}
 		reposComponent.inject(this);
 	}
 
@@ -57,7 +60,6 @@ public class ReposFragment
 	@Override public void onViewCreated(View view, @Nullable Bundle savedInstanceState){
 		super.onViewCreated(view, savedInstanceState);
 		ButterKnife.bind(this, view);
-		adapter = reposComponent.adapter();
 		recyclerView.setAdapter(adapter);
 		recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 		contentView.setOnRefreshListener(this);
@@ -81,7 +83,7 @@ public class ReposFragment
 	}
 
 	@Override public ReposPresenter createPresenter(){
-		return reposComponent.presenter();
+		return reposComponent.reposPresenter();
 	}
 
 	@Override public void setData(List<Repo> data){

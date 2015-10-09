@@ -1,4 +1,4 @@
-package com.nullcognition.mosby.model;
+package com.nullcognition.mosby.repos;
 // ersin 30/09/15 Copyright (c) 2015+ All rights reserved.
 
 
@@ -10,11 +10,10 @@ import com.hannesdorfmann.annotatedadapter.annotation.ViewField;
 import com.hannesdorfmann.annotatedadapter.annotation.ViewType;
 import com.hannesdorfmann.annotatedadapter.support.recyclerview.SupportAnnotatedAdapter;
 import com.nullcognition.mosby.R;
+import com.nullcognition.mosby.model.Repo;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
-
-import javax.inject.Inject;
 
 public class ReposAdapter extends SupportAnnotatedAdapter implements ReposAdapterBinder{
 
@@ -30,7 +29,7 @@ public class ReposAdapter extends SupportAnnotatedAdapter implements ReposAdapte
 
 	Picasso picasso;
 
-	@Inject public ReposAdapter(Context context, Picasso picasso){
+	public ReposAdapter(Context context, Picasso picasso){
 		super(context);
 		this.picasso = picasso;
 	}

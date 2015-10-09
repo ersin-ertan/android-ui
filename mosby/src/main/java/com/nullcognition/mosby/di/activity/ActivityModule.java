@@ -1,7 +1,8 @@
-package com.nullcognition.mosby;
+package com.nullcognition.mosby.di.activity;
 // ersin 30/09/15 Copyright (c) 2015+ All rights reserved.
 
 
+import android.app.Activity;
 import android.content.Context;
 
 import com.nullcognition.mosby.model.ErrorMessageDeterminer;
@@ -10,32 +11,30 @@ import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.OkHttpClient;
 import com.squareup.picasso.Picasso;
 
-import javax.inject.Singleton;
-
 import dagger.Module;
 import dagger.Provides;
 import retrofit.RestAdapter;
 import retrofit.client.OkClient;
 
-@Module() public class SampleModule{
+@Module public class ActivityModule{
 
-	private Context context;
-
-	public SampleModule(Context c){context = c;}
+	final private Activity activity;
+	public ActivityModule(Activity a){activity = a;}
 
 	@Provides public Context provideContext(){
-		return context;
+		return activity;
 	}
 
-	@Provides @Singleton Picasso providesPicasso(){
-		return Picasso.with(context);
+	@ActivityScope
+	@Provides Picasso providesPicasso(){
+		return Picasso.with(activity);
 	}
 
-
-	@Provides @Singleton public GithubApi providesGithubApi(){
+	@ActivityScope
+	@Provides public GithubApi providesGithubApi(){
 
 		OkHttpClient client = new OkHttpClient();
-		client.setCache(new Cache(context.getCacheDir(), 10 * 1024 * 1024));
+		client.setCache(new Cache(activity.getCacheDir(), 10 * 1024 * 1024));
 
 		RestAdapter restAdapter = new RestAdapter.Builder()
 				.setClient(new OkClient(client))
@@ -45,8 +44,6 @@ import retrofit.client.OkClient;
 		return restAdapter.create(GithubApi.class);
 	}
 
-	@Provides @Singleton
-	public ErrorMessageDeterminer providesErrorMessageDeterminer(){
-		return new ErrorMessageDeterminer();
-	}
+	@ActivityScope
+	@Provides public ErrorMessageDeterminer providesErrorMessageDeterminer(){ return new ErrorMessageDeterminer(); }
 }

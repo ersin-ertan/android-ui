@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:baselineAligned = "false"
+              android:layout_height = "match_parent"
+              android:layout_width = "match_parent"
+              android:orientation = "horizontal"
+              tools:context = "com.nullcognition.effectiveandroidui.ui.activity.MainActivity"
+              xmlns:android = "http://schemas.android.com/apk/res/android"
+              xmlns:tools = "http://schemas.android.com/tools"
+	>
+
+	<!-- TvShowCatalogFragment -->
+
+	<fragment
+		android:id = "@+id/f_tv_show_catalog"
+		android:layout_height = "match_parent"
+		android:layout_marginRight = "@dimen/secondary_margin"
+		android:layout_weight = "1"
+		android:layout_width = "match_parent"
+		class = "com.nullcognition.effectiveandroidui.ui.fragment.TvShowCatalogFragment"
+		tools:context = "com.nullcognition.effectiveandroidui.ui.activity.MainActivity"
+		/>
+
+	<!-- TvShowFragment -->
+
+	<fragment
+		android:id = "@+id/f_tv_show"
+		android:layout_height = "match_parent"
+		android:layout_weight = "1"
+		android:layout_width = "match_parent"
+		class = "com.nullcognition.effectiveandroidui.ui.fragment.TvShowFragment"
+		tools:context = "com.nullcognition.effectiveandroidui.ui.activity.MainActivity"
+		/>
+
+</LinearLayout>

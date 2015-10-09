@@ -5,6 +5,8 @@ package com.nullcognition.effectiveandroidui.di.application;
 import android.app.Application;
 import android.view.LayoutInflater;
 
+import com.nullcognition.effectiveandroidui.di.activity.ActivityScope;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
@@ -17,10 +19,5 @@ import dagger.Provides;
 
 	@Singleton
 	@Provides public Application provideApplication(){ return application; }
-
-
-	// should this be part of the activity module??
-	@Singleton
-	@Provides LayoutInflater provideLayoutInflater(){ return LayoutInflater.from(application); }
 
 }

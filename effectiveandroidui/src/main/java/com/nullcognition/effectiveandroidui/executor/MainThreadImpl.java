@@ -5,12 +5,14 @@ package com.nullcognition.effectiveandroidui.executor;
 import android.os.Handler;
 import android.os.Looper;
 
+import javax.inject.Inject;
+
 
 public class MainThreadImpl implements MainThread{
 
 	private Handler handler;
 
-	public MainThreadImpl(){ handler = new Handler(Looper.getMainLooper()); }
+	@Inject public MainThreadImpl(){ handler = new Handler(Looper.getMainLooper()); }
 
 	public void post(Runnable runnable){
 		handler.post(runnable);

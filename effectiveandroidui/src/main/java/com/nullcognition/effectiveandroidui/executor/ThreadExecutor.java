@@ -7,6 +7,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
+import javax.inject.Inject;
+
 public class ThreadExecutor implements Executor{
 
 	private static final int                     CORE_POOL_SIZE  = 3;
@@ -17,7 +19,7 @@ public class ThreadExecutor implements Executor{
 
 	private ThreadPoolExecutor threadPoolExecutor;
 
-	public ThreadExecutor(){
+	@Inject public ThreadExecutor(){
 		int                     corePoolSize  = CORE_POOL_SIZE;
 		int                     maxPoolSize   = MAX_POOL_SIZE;
 		int                     keepAliveTime = KEEP_ALIVE_TIME;

@@ -3,8 +3,8 @@
      - [Butterknife](https://github.com/JakeWharton/butterknife)[Example](https://github.com/JakeWharton/butterknife)
 
 - [Sockeqwe](https://github.com/sockeqwe)
-     - [AdapterDelegates](https://github.com/sockeqwe/adapterDelegates)[Example](https://github.com/sockeqwe/adapterDelegates)
-     - [AnnotatedAdapter](https://github.com/sockeqwe/annotatedAdapter)[Example](https://github.com/sockeqwe/annotatedAdapter)
+     - [AdapterDelegates](https://github.com/sockeqwe/adapterDelegates)-[Example](https://github.com/sockeqwe/adapterDelegates)
+     - [AnnotatedAdapter](https://github.com/sockeqwe/annotatedAdapter)-[Example](https://github.com/sockeqwe/annotatedAdapter)
      - [Mosby](https://yougithub.com/sockeqwe/mosby)[Example](https://github.com/sockeqwe/mosby)-evaluating
 
 - Google Databinding

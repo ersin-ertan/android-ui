@@ -3,7 +3,9 @@ package com.nullcognition.effectiveandroidui.di.activity;
 
 
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
+import android.view.LayoutInflater;
 
 import dagger.Module;
 import dagger.Provides;
@@ -15,4 +17,7 @@ import dagger.Provides;
 
 	@ActivityScope
 	@Provides public Context provideActivityContext(){ return activity; }
+
+	@ActivityScope
+	@Provides LayoutInflater provideLayoutInflater(Application application){ return LayoutInflater.from(application); }
 }

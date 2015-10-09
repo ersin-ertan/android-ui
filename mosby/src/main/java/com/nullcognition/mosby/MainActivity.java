@@ -9,6 +9,7 @@ import com.nullcognition.mosby.repos.ReposFragment;
 // working with retrofit v 1.9.0, when updating to 2.0.0 be sure to check the differences in the api like:
 // client(client), setUrl("http..."), requirement to set your own adapterConverter(RxAdapterConverterFactory.create())
 
+// setRetainInstance(true) in fragment nullifies this point
 // on rotation not working -
 // ViewState RetainingLceViewState of ReposFragment{281388fe #0 id=0x7f0c0051} is not Restorable (can not be
 // serialized in bundle, must implement RestorableViewState) nor is retaining (in memory) ViewState feature enabled.

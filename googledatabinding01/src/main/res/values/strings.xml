@@ -1,0 +1,4 @@
+<resources>
+	<string name = "app_name">GoogleDatabinding01</string>
+	<string name = "defaultPrice">$0.00</string>
+</resources>

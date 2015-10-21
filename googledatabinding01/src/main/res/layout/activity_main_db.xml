@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android = "http://schemas.android.com/apk/res/android">
+
+	<data>
+
+		<variable
+			name = "user"
+			type = "com.nullcognition.googledatabinding01.ViewModel"
+			/>
+
+		<variable
+			name = "controller"
+			type = "com.nullcognition.googledatabinding01.Controller"
+			/>
+	</data>
+
+	<LinearLayout
+		android:layout_height = "match_parent"
+		android:layout_width = "match_parent"
+		android:orientation = "vertical"
+		>
+
+		<TextView
+			android:layout_height = "wrap_content"
+			android:layout_width = "match_parent"
+			android:textAppearance = "?android:attr/textAppearanceLarge"
+		    android:text="@{user.price ?? @string/defaultPrice}"
+			/>
+
+		<Button
+			android:layout_height = "wrap_content" android:layout_width = "wrap_content"
+			android:onClick = "@{controller.controllerButtonClick}"
+			android:text = "@{controller.CONTROLLER_BUTTON_TEXT}"
+			/>
+
+	</LinearLayout>
+
+</layout>

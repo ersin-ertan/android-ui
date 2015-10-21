@@ -1,1 +1,1 @@
-include ':googledatabinding', ':effectiveandroidui', ':mosby', ':practice00', ':joebirchmvvm'
+include ':googledatabinding', ':effectiveandroidui', ':mosby', ':practice00', ':joebirchmvvm', ':googledatabinding01'

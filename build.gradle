@@ -11,7 +11,9 @@ buildscript{
 
 		classpath 'me.tatarka:gradle-retrolambda:3.2.3'
 
-		classpath "com.android.databinding:dataBinder:1.0-rc2"
+		classpath "com.android.databinding:dataBinder:1.0-rc2" // use for google databinding
+//		classpath "com.android.databinding:dataBinder:1.0-rc3" // not working
+//		classpath "com.android.databinding:dataBinder:1.0-rc4" // not working
 
 	}
 }

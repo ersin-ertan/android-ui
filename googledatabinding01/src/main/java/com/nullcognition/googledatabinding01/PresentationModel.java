@@ -2,9 +2,11 @@ package com.nullcognition.googledatabinding01;
 // ersin 21/10/15 Copyright (c) 2015+ All rights reserved.
 
 
+import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.view.View;
 
 import com.hannesdorfmann.parcelableplease.annotation.ParcelablePlease;
 
@@ -20,12 +22,16 @@ import com.hannesdorfmann.parcelableplease.annotation.ParcelablePlease;
 @ParcelablePlease
 public class PresentationModel implements Parcelable{
 
-	public ObservableField<String> text = new ObservableField<>(null);
+//	User user = new User("user text");
 
-	public void setText(final String text){
-		this.text.set(text);
 
-	}
+	public ObservableField<String> editText = new ObservableField<>(null);
+	// must be public, cannot be final
+	// will default as null and thus the @string/resource directed by the layout file
+	public ObservableField<String> text     = new ObservableField<>(null);
+
+	// based on this value, the view will be/not be visible, propagated to view
+	public ObservableBoolean isShowing = new ObservableBoolean(false);
 
 	@Override public int describeContents(){ return 0; }
 

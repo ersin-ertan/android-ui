@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android = "http://schemas.android.com/apk/res/android">
+<layout xmlns:android = "http://schemas.android.com/apk/res/android" xmlns:app = "http://schemas.android.com/apk/res-auto"
+	>
+
 
 	<data>
+
+		<import type = "android.view.View"/>
 
 		<variable
 			name = "presModel"
@@ -20,11 +24,19 @@
 		android:orientation = "vertical"
 		>
 
+		<EditText
+			android:id = "@+id/editText"
+			android:layout_height = "wrap_content" android:layout_width = "wrap_content"
+			app:textWatcher = "@{controller.tw}"
+			/>
+			<!--android:text = "@{presModel.editText}"-->
+
 		<TextView
 			android:layout_height = "wrap_content"
 			android:layout_width = "match_parent"
+			android:text = "@{presModel.text ?? @string/defaultPrice}"
 			android:textAppearance = "?android:attr/textAppearanceLarge"
-		    android:text="@{presModel.text ?? @string/defaultPrice}"
+			android:visibility = "@{presModel.isShowing ? View.VISIBLE : View.GONE}"
 			/>
 
 		<Button

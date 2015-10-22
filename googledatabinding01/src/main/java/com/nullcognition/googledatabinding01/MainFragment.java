@@ -25,7 +25,7 @@ public class MainFragment extends Fragment{
 		binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
 		setPresModel();
 
-		controller = new Controller(presentationModel);
+		controller = new Controller(binding.getRoot(), presentationModel);
 		binding.setController(controller);
 
 		return binding.getRoot();

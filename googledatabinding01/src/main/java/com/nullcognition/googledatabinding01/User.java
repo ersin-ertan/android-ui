@@ -4,12 +4,8 @@ package com.nullcognition.googledatabinding01;
 
 public class User{
 
-	private String price;
+	public String text;
 
-	public User(final String price){this.price = price;}
-
-	public String getPrice(){ return price; }
-
-	public void setPrice(String in){ price = in; }
+	public User(final String text){this.text = text;}
 
 }

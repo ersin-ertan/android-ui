@@ -5,12 +5,6 @@ package com.nullcognition.googledatabinding01;
 public class User{
 
 	private String price;
-	private String imageUrl;
-
-	public User(final String price, final String imageUrl){
-		this.price = price;
-		this.imageUrl = imageUrl;
-	}
 
 	public User(final String price){this.price = price;}
 
@@ -18,5 +12,4 @@ public class User{
 
 	public void setPrice(String in){ price = in; }
 
-	public String getImageUrl(){ return imageUrl; }
 }

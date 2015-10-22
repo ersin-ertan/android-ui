@@ -4,8 +4,8 @@
 	<data>
 
 		<variable
-			name = "user"
-			type = "com.nullcognition.googledatabinding01.ViewModel"
+			name = "presModel"
+			type = "com.nullcognition.googledatabinding01.PresentationModel"
 			/>
 
 		<variable
@@ -24,7 +24,7 @@
 			android:layout_height = "wrap_content"
 			android:layout_width = "match_parent"
 			android:textAppearance = "?android:attr/textAppearanceLarge"
-		    android:text="@{user.price ?? @string/defaultPrice}"
+		    android:text="@{presModel.text ?? @string/defaultPrice}"
 			/>
 
 		<Button

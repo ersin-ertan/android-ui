@@ -8,13 +8,18 @@
 		<import type = "android.view.View"/>
 
 		<variable
-			name = "presModel"
-			type = "com.nullcognition.googledatabinding01.PresentationModel"
+			name = "concreteModel"
+			type = "com.nullcognition.googledatabinding01.view.viewmodel.ConcreteViewModel"
+			/>
+
+		<variable
+			name = "concreteViewModel"
+			type = "com.nullcognition.googledatabinding01.view.viewmodel.ConcreteViewModel"
 			/>
 
 		<variable
 			name = "controller"
-			type = "com.nullcognition.googledatabinding01.Controller"
+			type = "com.nullcognition.googledatabinding01.controller.Controller"
 			/>
 	</data>
 
@@ -29,15 +34,15 @@
 			android:layout_height = "wrap_content" android:layout_width = "wrap_content"
 			app:textWatcher = "@{controller.tw}"
 			/>
-			<!--android:text = "@{presModel.editText}"-->
+			<!--android:text = "@{concreteModel.editText}"-->
 
-		<TextView
-			android:layout_height = "wrap_content"
-			android:layout_width = "match_parent"
-			android:text = "@{presModel.text ?? @string/defaultPrice}"
-			android:textAppearance = "?android:attr/textAppearanceLarge"
-			android:visibility = "@{presModel.isShowing ? View.VISIBLE : View.GONE}"
-			/>
+		<!--<TextView-->
+			<!--android:layout_height = "wrap_content"-->
+			<!--android:layout_width = "match_parent"-->
+			<!--android:text = "@{concreteModel.text ?? @string/defaultPrice}"-->
+			<!--android:textAppearance = "?android:attr/textAppearanceLarge"-->
+			<!--android:visibility = "@{concreteModel.isShowing ? View.VISIBLE : View.GONE}"-->
+			<!--/>-->
 
 		<Button
 			android:layout_height = "wrap_content" android:layout_width = "wrap_content"

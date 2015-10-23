@@ -1,4 +1,4 @@
-package com.nullcognition.googledatabinding01;
+package com.nullcognition.googledatabinding01.view;
 // ersin 22/10/15 Copyright (c) 2015+ All rights reserved.
 
 
@@ -11,19 +11,36 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.nullcognition.googledatabinding01.R;
+import com.nullcognition.googledatabinding01.controller.Controller;
 import com.nullcognition.googledatabinding01.databinding.FragmentMainBinding;
+import com.nullcognition.googledatabinding01.view.viewmodel.PresentationModel;
 import com.sora.util.akatsuki.Akatsuki;
 import com.sora.util.akatsuki.Retained;
+
+/* Notes - do not wrap the model object in the presentation model, use a facade to hide properties and pick the correct
+facade to populate the view model base on configuration...
+*/
+
 
 public class MainFragment extends Fragment{
 
 	private   FragmentMainBinding binding;
+
 	@Retained PresentationModel   presentationModel;
+
+	// @Inject
 	private   Controller          controller;
 
+	public void setPresModel(@NonNull PresentationModel presModel){
+		presentationModel = presModel;
+		if(binding != null){ binding.setPresModel(presentationModel); }
+	}
+
 	@Nullable @Override public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState){
+
 		binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
-		setPresModel();
+		binding.setPresModel(presentationModel);
 
 		controller = new Controller(binding.getRoot(), presentationModel);
 		binding.setController(controller);
@@ -31,22 +48,10 @@ public class MainFragment extends Fragment{
 		return binding.getRoot();
 	}
 
-	private void setPresModel(){
-		if(binding != null && presentationModel != null){binding.setPresModel(presentationModel); }
-	}
-
-	public void setPresModel(@NonNull PresentationModel presModel){
-		presentationModel = presModel;
-		if(binding != null){ binding.setPresModel(presentationModel);}
-	}
-
-
 	@Override public void onCreate(@Nullable final Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		Akatsuki.restore(this, savedInstanceState);
-		if(presentationModel == null){
-			presentationModel = new PresentationModel();
-		}
+		if(presentationModel == null){ presentationModel = new PresentationModel(); }
 	}
 
 	@Override public void onSaveInstanceState(final Bundle outState){

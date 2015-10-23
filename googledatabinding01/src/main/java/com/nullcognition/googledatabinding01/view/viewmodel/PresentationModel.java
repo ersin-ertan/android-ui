@@ -1,4 +1,4 @@
-package com.nullcognition.googledatabinding01;
+package com.nullcognition.googledatabinding01.view.viewmodel;
 // ersin 21/10/15 Copyright (c) 2015+ All rights reserved.
 
 
@@ -6,7 +6,6 @@ import android.databinding.ObservableBoolean;
 import android.databinding.ObservableField;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.view.View;
 
 import com.hannesdorfmann.parcelableplease.annotation.ParcelablePlease;
 

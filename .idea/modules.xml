@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/joebirchmvvm/joebirchmvvm.iml" filepath="$PROJECT_DIR$/joebirchmvvm/joebirchmvvm.iml" />
       <module fileurl="file://$PROJECT_DIR$/mosby/mosby.iml" filepath="$PROJECT_DIR$/mosby/mosby.iml" />
       <module fileurl="file://$PROJECT_DIR$/practice00/practice00.iml" filepath="$PROJECT_DIR$/practice00/practice00.iml" />
+      <module fileurl="file://$PROJECT_DIR$/widgets/widgets.iml" filepath="$PROJECT_DIR$/widgets/widgets.iml" />
     </modules>
   </component>
 </project>

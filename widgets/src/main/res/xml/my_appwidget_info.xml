@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider
+	android:configure = "com.nullcognition.widgets.MyAppWidgetConfigure"
+	android:initialLayout = "@layout/appwidget"
+	android:minHeight = "40dp"
+	android:minWidth = "40dp"
+	android:previewImage = "@android:drawable/btn_star_big_on"
+	android:resizeMode = "horizontal|vertical"
+	android:updatePeriodMillis = "5000"
+	android:widgetCategory = "home_screen"
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	>
+
+	<!-- keyguard is the lockscreen only available for < 5.0-->
+
+	<!-- update period is how often AppWidgetProvider onUpdate() is called -->
+
+	<!-- updates on a sleeping device will wake it, use AlarmManager to update with an intent
+	 to update without waking with ELAPSED_REALTIME or RTC, which will only deliver the alarm
+	 when the device is awake and updatePeriodMillis ("0").-->
+
+
+</appwidget-provider>

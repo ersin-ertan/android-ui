@@ -1,0 +1,4 @@
+<resources>
+	<string name = "app_name">Widgets</string>
+	<string name = "toast_format_string">Toast</string>
+</resources>

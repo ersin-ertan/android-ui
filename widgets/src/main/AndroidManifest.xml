@@ -23,11 +23,11 @@
 		</receiver>
 		>
 
-		<activity android:name=".MyAppWidgetConfigure">
-			<intent-filter>
-				<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
-			</intent-filter>
-		</activity>
+		<!--<activity android:name=".MyAppWidgetConfigure">-->
+			<!--<intent-filter>-->
+				<!--<action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>-->
+			<!--</intent-filter>-->
+		<!--</activity>-->
 
 		<activity android:name = ".MainActivity">
 			<intent-filter>

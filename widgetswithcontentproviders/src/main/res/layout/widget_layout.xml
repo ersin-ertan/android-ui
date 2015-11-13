@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	android:layout_height = "match_parent"
+	android:layout_width = "match_parent"
+	xmlns:android = "http://schemas.android.com/apk/res/android"
+	>
+
+	<StackView
+		android:gravity = "center"
+		android:id = "@+id/stack_view"
+		android:layout_height = "match_parent"
+		android:layout_width = "match_parent"
+		android:loopViews = "true"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		/>
+
+	<TextView
+		android:gravity = "center"
+		android:id = "@+id/empty_view"
+		android:layout_height = "match_parent"
+		android:layout_width = "match_parent"
+		android:text = "@string/empty_view_text"
+		android:textColor = "#ffffff"
+		android:textSize = "20sp"
+		android:textStyle = "bold"
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		/>
+</FrameLayout>

@@ -1,0 +1,14 @@
+<resources>
+	<string name = "app_name">WidgetsWithContentProviders</string>
+	<string name = "empty_view_text">Empty</string>
+
+
+	<string-array name = "db_commands">
+		<item>Default</item>
+		<item>Get</item>
+		<item>Put</item>
+		<item>Delete</item>
+	</string-array>
+
+
+</resources>

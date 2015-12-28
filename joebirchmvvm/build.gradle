@@ -5,7 +5,7 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 android{
 	compileSdkVersion 23
-	buildToolsVersion "23.0.0"
+	buildToolsVersion "23.0.2"
 
 	defaultConfig{
 		applicationId "com.nullcognition.joebirchmvvm"
@@ -25,10 +25,10 @@ android{
 dependencies{
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 	testCompile 'junit:junit:4.12'
-	compile 'com.android.support:appcompat-v7:23.0.1'
+	compile 'com.android.support:appcompat-v7:23.1.1'
 
-	final SUPPORT_LIBRARY_VERSION = '23.0.1'
-	final DAGGER_VERSION = '2.0.1'
+	final SUPPORT_LIBRARY_VERSION = '23.1.1'
+	final DAGGER_VERSION = '2.1-SNAPSHOT'
 
 	compile "com.android.support:support-v4:$SUPPORT_LIBRARY_VERSION"
 	compile "com.android.support:appcompat-v7:$SUPPORT_LIBRARY_VERSION"
@@ -37,7 +37,7 @@ dependencies{
 	compile "com.android.support:recyclerview-v7:$SUPPORT_LIBRARY_VERSION"
 	compile "com.android.support:support-annotations:$SUPPORT_LIBRARY_VERSION"
 
-	compile 'com.squareup.sqlbrite:sqlbrite:0.2.1'
+	compile 'com.squareup.sqlbrite:sqlbrite:0.4.1'
 	compile 'com.squareup.retrofit:retrofit:1.9.0'
 	compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
 	compile 'com.squareup.okhttp:okhttp:2.4.0'

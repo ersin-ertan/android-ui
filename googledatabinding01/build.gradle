@@ -4,8 +4,8 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 
 android{
-	compileSdkVersion 23
-	buildToolsVersion "23.0.2"
+	compileSdkVersion rootProject.ext.compileSdkVersion
+	buildToolsVersion rootProject.ext.buildToolsVersion
 
 	defaultConfig{
 		applicationId "com.nullcognition.googledatabinding01"
@@ -24,16 +24,19 @@ android{
 
 dependencies{
 	compile fileTree(dir: 'libs', include: ['*.jar'])
-	testCompile 'junit:junit:4.12'
-	compile 'com.android.support:appcompat-v7:23.1.1'
+	testCompile 'junit:junit:' + rootProject.ext.junit_v
+
+	compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7_v
+	compile 'com.android.support:support-v4:' + rootProject.ext.appcompat7_v
 
 	compile 'io.reactivex:rxandroid:1.0.1'
 	compile 'io.reactivex:rxjava:1.0.14'
 
 //	compile 'com.github.fabioCollini.mv2m:mv2mrx:0.3.1'
-	compile 'com.sora.util.akatsuki:akatsuki-api:0.0.3'
-	apt 'com.sora.util.akatsuki:akatsuki-compiler:0.0.3'
+	compile 'com.sora.util.akatsuki:akatsuki-api:'+ rootProject.ext.akatsuki_v
+	apt 'com.sora.util.akatsuki:akatsuki-compiler:'+ rootProject.ext.akatsuki_v
 
-	compile 'com.hannesdorfmann.parcelableplease:annotation:1.0.1'
-	apt 'com.hannesdorfmann.parcelableplease:processor:1.0.1'
+	compile 'com.hannesdorfmann.parcelableplease:annotation:' + rootProject.ext.parcelable_v
+	apt 'com.hannesdorfmann.parcelableplease:processor:'+ rootProject.ext.parcelable_v
+
 }

@@ -3,8 +3,8 @@ apply plugin: 'com.neenbedankt.android-apt'
 
 
 android{
-	compileSdkVersion 23
-	buildToolsVersion "23.0.2"
+	compileSdkVersion rootProject.ext.compileSdkVersion
+	buildToolsVersion rootProject.ext.buildToolsVersion
 
 	defaultConfig{
 		applicationId "com.nullcognition.effectiveandroidui"
@@ -23,20 +23,17 @@ android{
 
 dependencies{
 	compile fileTree(dir: 'libs', include: ['*.jar'])
-	testCompile 'junit:junit:4.12'
+	testCompile 'junit:junit:' + rootProject.ext.junit_v
 
-	compile 'com.android.support:appcompat-v7:23.1.1'
-	compile 'com.android.support:support-v4:23.1.1'
+	compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7_v
+	compile 'com.android.support:support-v4:' + rootProject.ext.appcompat7_v
 
-	apt 'com.google.dagger:dagger-compiler:2.1-SNAPSHOT'
-	compile 'com.google.dagger:dagger:2.1-SNAPSHOT'
+	apt 'com.google.dagger:dagger-compiler:'+ rootProject.ext.dagger2snap_v
+	compile 'com.google.dagger:dagger:'+ rootProject.ext.dagger2snap_v
 	compile 'javax.annotation:javax.annotation-api:1.2'
 
-	compile 'com.jakewharton:butterknife:7.0.1'
-
+	compile 'com.jakewharton:butterknife:' + rootProject.ext.butterknife_v
 	compile 'com.github.pedrovgs:renderers:2.0.3'
-
 	compile 'com.squareup.picasso:picasso:2.5.2'
-
 	compile 'com.github.pedrovgs:draggablepanel:1.8'
 }

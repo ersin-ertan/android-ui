@@ -3,8 +3,8 @@ apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.android.databinding'
 
 android{
-	compileSdkVersion 23
-	buildToolsVersion "23.0.2"
+	compileSdkVersion rootProject.ext.compileSdkVersion
+	buildToolsVersion rootProject.ext.buildToolsVersion
 
 	defaultConfig{
 		applicationId "com.nullcognition.practice00"
@@ -23,24 +23,25 @@ android{
 
 dependencies{
 	compile fileTree(dir: 'libs', include: ['*.jar'])
-	testCompile 'junit:junit:4.12'
+	testCompile 'junit:junit:' + rootProject.ext.junit_v
 
-	compile 'com.android.support:appcompat-v7:23.1.1'
+	compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7_v
+	compile 'com.android.support:support-v4:' + rootProject.ext.appcompat7_v
 
-	compile 'com.squareup.moshi:moshi:1.0.0'
+	compile 'com.squareup.moshi:moshi:' + rootProject.ext.moshi_v
 
-	compile 'com.sora.util.akatsuki:akatsuki-api:0.0.3'
-	apt 'com.sora.util.akatsuki:akatsuki-compiler:0.0.3'
+	compile 'com.sora.util.akatsuki:akatsuki-api:' + rootProject.ext.akatsuki_v
+	apt 'com.sora.util.akatsuki:akatsuki-compiler:'+ rootProject.ext.akatsuki_v
 
-	compile 'com.hannesdorfmann.parcelableplease:annotation:1.0.1'
-	apt 'com.hannesdorfmann.parcelableplease:processor:1.0.1'
+	compile 'com.hannesdorfmann.parcelableplease:annotation:'+ rootProject.ext.parcelable_v
+	apt 'com.hannesdorfmann.parcelableplease:processor:' + rootProject.ext.parcelable_v
 
 	compile 'com.hannesdorfmann.fragmentargs:annotation:2.1.2'
 	apt 'com.hannesdorfmann.fragmentargs:processor:2.1.2'
 
-	apt 'com.google.dagger:dagger-compiler:2.1-SNAPSHOT'
-	compile 'com.google.dagger:dagger:2.1-SNAPSHOT'
+	apt 'com.google.dagger:dagger-compiler:'+ rootProject.ext.dagger2snap_v
+	compile 'com.google.dagger:dagger:'+ rootProject.ext.dagger2snap_v
 	compile 'javax.annotation:javax.annotation-api:1.2'
 
-	compile 'com.jakewharton:butterknife:7.0.1'
+	compile 'com.jakewharton:butterknife:' + rootProject.ext.butterknife_v
 }

@@ -30,3 +30,40 @@ allprojects {
         }
     }
 }
+
+ext{
+
+    minSdk = 15
+    targetSdk = 23
+    compileSdkVersion = 23
+    buildToolsVersion = '23.0.2'
+
+    javaSourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
+    javaTargetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
+
+    // testing support
+    junit_v = '4.12'
+    appcompat7_v = '23.1.1' // includes RecyclerView
+
+    // architecture
+    dagger2_v = '2.0.1'
+    dagger2snap_v = '2.1-SNAPSHOT' // above is untested, this version is known to work
+
+    rxjava_v = '1.0.14'
+    rxandroid_v = '1.0.1'
+
+    // ui
+    butterknife_v = '7.0.1'
+    glide_v = '3.6.1'
+
+    // state
+    akatsuki_v = '0.0.3' // old library version
+    parcelable_v = '1.0.1'
+
+    // Network
+    retrofit_v = '2.0.0-beta2' // don't use
+    moshi_v = '1.0.0'
+    okhttp_v = '2.5.0'
+
+
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient"
+    tools:context="com.nullcognition.svg.MainActivity"
+
+    >
+  <ImageView
+      app:layout_heightPercent="18%"
+      app:layout_marginLeftPercent="26%"
+      app:layout_marginTopPercent="22%"
+      app:layout_widthPercent="48%"
+      app:srcCompat="@drawable/bake_trans"
+      />
+
+</android.support.percent.PercentFrameLayout>
+

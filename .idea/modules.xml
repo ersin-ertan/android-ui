@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/android-ui.iml" filepath="$PROJECT_DIR$/android-ui.iml" />
       <module fileurl="file://$PROJECT_DIR$/effectiveandroidui/effectiveandroidui.iml" filepath="$PROJECT_DIR$/effectiveandroidui/effectiveandroidui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fastlayoutconductor/fastlayoutconductor.iml" filepath="$PROJECT_DIR$/fastlayoutconductor/fastlayoutconductor.iml" />
       <module fileurl="file://$PROJECT_DIR$/googledatabinding/googledatabinding.iml" filepath="$PROJECT_DIR$/googledatabinding/googledatabinding.iml" />
       <module fileurl="file://$PROJECT_DIR$/googledatabinding01/googledatabinding01.iml" filepath="$PROJECT_DIR$/googledatabinding01/googledatabinding01.iml" />
       <module fileurl="file://$PROJECT_DIR$/joebirchmvvm/joebirchmvvm.iml" filepath="$PROJECT_DIR$/joebirchmvvm/joebirchmvvm.iml" />

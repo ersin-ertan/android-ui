@@ -1,62 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android = "http://schemas.android.com/apk/res/android">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1dp"
+    android:layout_height="1dp"
+    />
+    <!--<layout xmlns:android = "http://schemas.android.com/apk/res/android">-->
 
-	<data>
-
-
-		<variable
-			name = "someObservable"
-			type = "com.nullcognition.googledatabinding.SomeObservable"
-			/>
-
-		<variable
-			name = "sofh"
-			type = "com.nullcognition.googledatabinding.SomeObservableFieldHolder"
-			/>
-	</data>
-
-	<LinearLayout
-		android:layout_height = "match_parent"
-		android:layout_width = "match_parent"
-		android:orientation = "vertical"
-		>
-
-		<TextView
-			android:layout_height = "wrap_content"
-			android:layout_width = "match_parent"
-			android:text = "@{someObservable.firstName ?? `default from xml someobservable`}"
-			android:textAppearance = "?android:attr/textAppearanceLarge"
-			/>
-
-		<TextView
-			android:layout_height = "wrap_content"
-			android:layout_width = "match_parent"
-			android:text = "@{sofh.lastName ?? `default from xml sofh text`}"
-			android:textAppearance = "?android:attr/textAppearanceLarge"
-			/>
-		<!-- can't have null coaleser on the ObservableField types, maybe-->
-
-		<TextView
-		android:layout_height = "wrap_content"
-		android:layout_width = "match_parent"
-		android:text = "@{String.valueOf((Integer)sofh.age)}"
-		android:textAppearance = "?android:attr/textAppearanceLarge"
-		/>
-		<!-- turns out that you needed to cast it to the primitive class type first then string.valof-->
-
-		<!--tried to wrap the int observable field in String.valueOf, to display in textview and tried importing string
-		both did not work, even tried with the Integer class,
-		even tried making a custom immport and method to take in the obsInt and return a string but
-		did not work-->
+    <!--<data>-->
 
 
-		<Button
-			android:id = "@+id/btn_chgVar"
-			android:layout_height = "wrap_content"
-			android:layout_width = "wrap_content"
-			android:text = "Change SomeObservable variable"
-			/>
+    <!--<variable-->
+    <!--name = "someObservable"-->
+    <!--type = "com.nullcognition.googledatabinding.SomeObservable"-->
+    <!--/>-->
 
-	</LinearLayout>
+    <!--<variable-->
+    <!--name = "sofh"-->
+    <!--type = "com.nullcognition.googledatabinding.SomeObservableFieldHolder"-->
+    <!--/>-->
+    <!--</data>-->
 
-</layout>
+    <!--<LinearLayout-->
+    <!--android:layout_height = "match_parent"-->
+    <!--android:layout_width = "match_parent"-->
+    <!--android:orientation = "vertical"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:layout_height = "wrap_content"-->
+    <!--android:layout_width = "match_parent"-->
+    <!--android:text = "@{someObservable.firstName ?? `default from xml someobservable`}"-->
+    <!--android:textAppearance = "?android:attr/textAppearanceLarge"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:layout_height = "wrap_content"-->
+    <!--android:layout_width = "match_parent"-->
+    <!--android:text = "@{sofh.lastName ?? `default from xml sofh text`}"-->
+    <!--android:textAppearance = "?android:attr/textAppearanceLarge"-->
+    <!--/>-->
+    <!--&lt;!&ndash; can't have null coaleser on the ObservableField types, maybe&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:layout_height = "wrap_content"-->
+    <!--android:layout_width = "match_parent"-->
+    <!--android:text = "@{String.valueOf((Integer)sofh.age)}"-->
+    <!--android:textAppearance = "?android:attr/textAppearanceLarge"-->
+    <!--/>-->
+    <!--&lt;!&ndash; turns out that you needed to cast it to the primitive class type first then string.valof&ndash;&gt;-->
+
+    <!--&lt;!&ndash;tried to wrap the int observable field in String.valueOf, to display in textview and tried importing string-->
+    <!--both did not work, even tried with the Integer class,-->
+    <!--even tried making a custom immport and method to take in the obsInt and return a string but-->
+    <!--did not work&ndash;&gt;-->
+
+
+    <!--<Button-->
+    <!--android:id = "@+id/btn_chgVar"-->
+    <!--android:layout_height = "wrap_content"-->
+    <!--android:layout_width = "wrap_content"-->
+    <!--android:text = "Change SomeObservable variable"-->
+    <!--/>-->
+
+    <!--</LinearLayout>-->
+
+    <!--</layout>-->

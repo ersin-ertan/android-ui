@@ -8,18 +8,23 @@ import android.databinding.Bindable;
 public class SomeObservable extends BaseObservable{
 
 	private String firstName;
-	@Bindable public String getFirstName(){return this.firstName;}
-
 	private String lastName;
-	@Bindable public String getLastName(){return this.lastName;}
+
+	@Bindable public String getFirstName() {
+		return this.firstName;
+	}
 
 	public void setFirstName(String firstName){
 		this.firstName = firstName;
-		notifyPropertyChanged(BR.firstName);
+		//notifyPropertyChanged(BR.firstName);
+	}
+
+	@Bindable public String getLastName() {
+		return this.lastName;
 	}
 
 	public void setLastName(String lastName){
 		this.lastName = lastName;
-		notifyPropertyChanged(BR.lastName);
+		//notifyPropertyChanged(BR.lastName);
 	}
 }

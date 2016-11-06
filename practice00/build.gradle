@@ -39,8 +39,8 @@ dependencies{
 	compile 'com.hannesdorfmann.fragmentargs:annotation:2.1.2'
 	apt 'com.hannesdorfmann.fragmentargs:processor:2.1.2'
 
-	apt 'com.google.dagger:dagger-compiler:'+ rootProject.ext.dagger2snap_v
-	compile 'com.google.dagger:dagger:'+ rootProject.ext.dagger2snap_v
+	apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
+	compile 'com.google.dagger:dagger:' + rootProject.ext.dagger2_v
 	compile 'javax.annotation:javax.annotation-api:1.2'
 
 	compile 'com.jakewharton:butterknife:' + rootProject.ext.butterknife_v

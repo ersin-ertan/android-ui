@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/effectiveandroidui" />
+            <option value="$PROJECT_DIR$/fastlayoutconductor" />
             <option value="$PROJECT_DIR$/googledatabinding" />
             <option value="$PROJECT_DIR$/googledatabinding01" />
             <option value="$PROJECT_DIR$/joebirchmvvm" />
@@ -19,19 +20,7 @@
             <option value="$PROJECT_DIR$/widgetswithcontentproviders" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/effectiveandroidui" />
-            <option value="$PROJECT_DIR$/googledatabinding" />
-            <option value="$PROJECT_DIR$/googledatabinding01" />
-            <option value="$PROJECT_DIR$/joebirchmvvm" />
-            <option value="$PROJECT_DIR$/mosby" />
-            <option value="$PROJECT_DIR$/practice00" />
-            <option value="$PROJECT_DIR$/widgets" />
-            <option value="$PROJECT_DIR$/widgetswithcontentproviders" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

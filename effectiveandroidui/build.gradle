@@ -2,38 +2,38 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 
-android{
-	compileSdkVersion rootProject.ext.compileSdkVersion
-	buildToolsVersion rootProject.ext.buildToolsVersion
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
 
-	defaultConfig{
-		applicationId "com.nullcognition.effectiveandroidui"
-		minSdkVersion 15
-		targetSdkVersion 23
-		versionCode 1
-		versionName "1.0"
-	}
-	buildTypes{
-		release{
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-		}
-	}
+  defaultConfig {
+    applicationId "com.nullcognition.effectiveandroidui"
+    minSdkVersion 15
+    targetSdkVersion 23
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
 }
 
-dependencies{
-	compile fileTree(dir: 'libs', include: ['*.jar'])
-	testCompile 'junit:junit:' + rootProject.ext.junit_v
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  testCompile 'junit:junit:' + rootProject.ext.junit_v
 
-	compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7_v
-	compile 'com.android.support:support-v4:' + rootProject.ext.appcompat7_v
+  compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7_v
+  compile 'com.android.support:support-v4:' + rootProject.ext.appcompat7_v
 
-	apt 'com.google.dagger:dagger-compiler:'+ rootProject.ext.dagger2snap_v
-	compile 'com.google.dagger:dagger:'+ rootProject.ext.dagger2snap_v
-	compile 'javax.annotation:javax.annotation-api:1.2'
+  apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
+  compile 'com.google.dagger:dagger:' + rootProject.ext.dagger2_v
+  compile 'javax.annotation:javax.annotation-api:1.2'
 
-	compile 'com.jakewharton:butterknife:' + rootProject.ext.butterknife_v
-	compile 'com.github.pedrovgs:renderers:2.0.3'
-	compile 'com.squareup.picasso:picasso:2.5.2'
-	compile 'com.github.pedrovgs:draggablepanel:1.8'
+  compile 'com.jakewharton:butterknife:' + rootProject.ext.butterknife_v
+  compile 'com.github.pedrovgs:renderers:2.0.3'
+  compile 'com.squareup.picasso:picasso:2.5.2'
+  compile 'com.github.pedrovgs:draggablepanel:1.8'
 }

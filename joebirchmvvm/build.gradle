@@ -49,7 +49,7 @@ dependencies{
 
 	compile 'org.ocpsoft.prettytime:prettytime:3.2.7.Final'
 
-	compile 'com.google.dagger:dagger:'+ rootProject.ext.dagger2snap_v
-	apt 'com.google.dagger:dagger-compiler:'+ rootProject.ext.dagger2snap_v
+	compile 'com.google.dagger:dagger:' + rootProject.ext.dagger2_v
+	apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
 	provided 'org.glassfish:javax.annotation:10.0-b28'
 }

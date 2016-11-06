@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.0.0-alpha3'
+        classpath 'com.android.tools.build:gradle:2.2.2'
 
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
 
@@ -22,12 +22,12 @@ allprojects {
     repositories {
         jcenter()
         maven { url "https://jitpack.io" }
-        maven {
-            url 'https://oss.sonatype.org/content/repositories/snapshots/'
-        }
-        maven {
-            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
-        }
+        //        maven {
+        //            url 'https://oss.sonatype.org/content/repositories/snapshots/'
+        //        }
+        //        maven {
+        //            url 'http://oss.jfrog.org/artifactory/oss-snapshot-local'
+        //        }
     }
 }
 
@@ -36,7 +36,7 @@ ext{
     minSdk = 15
     targetSdk = 23
     compileSdkVersion = 23
-    buildToolsVersion = '23.0.2'
+    buildToolsVersion = '25.0.0'
 
     javaSourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
     javaTargetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
@@ -46,8 +46,7 @@ ext{
     appcompat7_v = '23.1.1' // includes RecyclerView
 
     // architecture
-    dagger2_v = '2.0.1'
-    dagger2snap_v = '2.1-SNAPSHOT' // above is untested, this version is known to work
+    dagger2_v = '2.7'
 
     rxjava_v = '1.0.14'
     rxandroid_v = '1.0.1'

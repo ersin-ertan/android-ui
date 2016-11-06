@@ -1,7 +1,6 @@
 package com.nullcognition.joebirchmvvm.view.activity;
 // ersin 03/10/15 Copyright (c) 2015+ All rights reserved.
 
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +12,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.nullcognition.joebirchmvvm.HackerNewsApplication;
 import com.nullcognition.joebirchmvvm.R;
 import com.nullcognition.joebirchmvvm.data.DataManager;
@@ -21,35 +22,27 @@ import com.nullcognition.joebirchmvvm.model.Comment;
 import com.nullcognition.joebirchmvvm.model.Post;
 import com.nullcognition.joebirchmvvm.util.DataUtils;
 import com.nullcognition.joebirchmvvm.util.DialogFactory;
-import com.nullcognition.joebirchmvvm.view.adapter.CommentAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.subscriptions.CompositeSubscription;
 import timber.log.Timber;
 
+//import com.nullcognition.joebirchmvvm.view.adapter.CommentAdapter;
+
 public class CommentsActivity extends BaseActivity{
 
+	public static final String EXTRA_POST =
+			"com.nullcognition.mvvm_hackernews.ui.activity.CommentsActivity.EXTRA_POST";
 	@Bind(R.id.progress_indicator) LinearLayout progressBar;
-
-
 	@Bind(R.id.layout_offline)    LinearLayout   offlineLayout;
 	@Bind(R.id.recycler_comments) RecyclerView   commentsRecycler;
 	@Bind(R.id.layout_comments)   RelativeLayout commentsLayout;
 	@Bind(R.id.text_no_comments)  TextView       noCommentsText;
 	@Bind(R.id.toolbar)           Toolbar        toolbar;
-
-	public static final String EXTRA_POST =
-			"com.nullcognition.mvvm_hackernews.ui.activity.CommentsActivity.EXTRA_POST";
-
 	private ArrayList<Comment>    comments;
-	private CommentAdapter        commentAdapter;
+	//private CommentAdapter        commentAdapter;
 	private DataManager           dataManager;
 	private CompositeSubscription subscription;
 	private Post                  post;
@@ -100,8 +93,8 @@ public class CommentsActivity extends BaseActivity{
 
 	private void setupRecyclerView(){
 		commentsRecycler.setLayoutManager(new LinearLayoutManager(this));
-		commentAdapter = new CommentAdapter(this, post, comments);
-		commentsRecycler.setAdapter(commentAdapter);
+		//commentAdapter = new CommentAdapter(this, post, comments);
+		//commentsRecycler.setAdapter(commentAdapter);
 	}
 
 	private void loadStoriesIfNetworkConnected(){
@@ -148,7 +141,7 @@ public class CommentsActivity extends BaseActivity{
 	private void addCommentViews(Comment comment){
 		comments.add(comment);
 		comments.addAll(comment.comments);
-		commentAdapter.notifyDataSetChanged();
+		//commentAdapter.notifyDataSetChanged();
 	}
 
 	private void showHideOfflineLayout(boolean isOffline){

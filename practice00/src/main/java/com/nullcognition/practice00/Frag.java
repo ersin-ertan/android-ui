@@ -1,9 +1,7 @@
 package com.nullcognition.practice00;
 // ersin 01/10/15 Copyright (c) 2015+ All rights reserved.
 
-
 import android.content.Context;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -11,12 +9,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.hannesdorfmann.fragmentargs.FragmentArgs;
 import com.hannesdorfmann.fragmentargs.annotation.Arg;
-import com.nullcognition.practice00.databinding.FragBinding;
 import com.sora.util.akatsuki.Akatsuki;
 import com.sora.util.akatsuki.Retained;
+
+//import com.nullcognition.practice00.databinding.FragBinding;
 
 public class Frag extends Fragment{
 
@@ -65,10 +63,11 @@ public class Frag extends Fragment{
 
 
 //		View rootView = inflater.inflate(R.layout.frag, container, false);
-		FragBinding fragBinding = DataBindingUtil.inflate(inflater, R.layout.frag, container, false);
-		fragBinding.setRet(retainable);
-		fragBinding.setFragViewModel(fragViewModel);
-		return fragBinding.getRoot();
+		//		FragBinding fragBinding = DataBindingUtil.inflate(inflater, R.layout.frag, container, false);
+		//		fragBinding.setRet(retainable);
+		//		fragBinding.setFragViewModel(fragViewModel);
+		//		return fragBinding.getRoot();
+		return null;
 //		fragBinding.setVariable()inflate()bind()invalidateAll()hasPendingBindings()getRoot()getRet()setRet(); and more
 	}
 

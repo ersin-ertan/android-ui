@@ -14,47 +14,39 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import com.nullcognition.joebirchmvvm.HackerNewsApplication;
 import com.nullcognition.joebirchmvvm.R;
 import com.nullcognition.joebirchmvvm.data.DataManager;
 import com.nullcognition.joebirchmvvm.model.Post;
 import com.nullcognition.joebirchmvvm.util.DataUtils;
 import com.nullcognition.joebirchmvvm.util.DialogFactory;
-import com.nullcognition.joebirchmvvm.view.adapter.PostAdapter;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.subscriptions.CompositeSubscription;
 import timber.log.Timber;
 
+//import com.nullcognition.joebirchmvvm.view.adapter.PostAdapter;
+
 public class StoriesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener{
 
+	public static final String ARG_USER = "ARG_USER";
 	@Bind(R.id.swipe_container)
 	SwipeRefreshLayout mSwipeRefreshLayout;
-
 	@Bind(R.id.recycler_stories)
 	RecyclerView mListPosts;
-
 	@Bind(R.id.layout_offline)
 	LinearLayout mOfflineContainer;
-
 	@Bind(R.id.progress_indicator)
 	ProgressBar mProgressBar;
-
 	@Bind(R.id.toolbar)
 	Toolbar mToolbar;
-
-	public static final String ARG_USER = "ARG_USER";
-
 	private DataManager           mDataManager;
-	private PostAdapter           mPostAdapter;
+	//private PostAdapter           mPostAdapter;
 	private CompositeSubscription mSubscriptions;
 	private List<Post>            mStories;
 	private String                mUser;
@@ -77,7 +69,7 @@ public class StoriesFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
 		Bundle bundle = getArguments();
 		if(bundle != null){ mUser = bundle.getString(ARG_USER, null); }
-		mPostAdapter = new PostAdapter(getActivity(), mUser != null);
+		//mPostAdapter = new PostAdapter(getActivity(), mUser != null);
 	}
 
 	@Override
@@ -101,7 +93,7 @@ public class StoriesFragment extends Fragment implements SwipeRefreshLayout.OnRe
 	@Override
 	public void onRefresh(){
 		mSubscriptions.unsubscribe();
-		if(mPostAdapter != null){ mPostAdapter.setItems(new ArrayList<Post>()); }
+		//if(mPostAdapter != null){ mPostAdapter.setItems(new ArrayList<Post>()); }
 		if(mUser != null){
 			getUserStories();
 		}
@@ -130,8 +122,8 @@ public class StoriesFragment extends Fragment implements SwipeRefreshLayout.OnRe
 	private void setupRecyclerView(){
 		mListPosts.setLayoutManager(new LinearLayoutManager(getActivity()));
 		mListPosts.setHasFixedSize(true);
-		mPostAdapter.setItems(mStories);
-		mListPosts.setAdapter(mPostAdapter);
+		//mPostAdapter.setItems(mStories);
+		//mListPosts.setAdapter(mPostAdapter);
 	}
 
 	private void loadStoriesIfNetworkConnected(){
@@ -171,8 +163,8 @@ public class StoriesFragment extends Fragment implements SwipeRefreshLayout.OnRe
 			                               @Override
 			                               public void onNext(Post post){
 				                               hideLoadingViews();
-				                               mPostAdapter.addItem(post);
-			                               }
+																			 //mPostAdapter.addItem(post);
+																		 }
 		                               }));
 	}
 
@@ -197,8 +189,8 @@ public class StoriesFragment extends Fragment implements SwipeRefreshLayout.OnRe
 			                               @Override
 			                               public void onNext(Post story){
 				                               hideLoadingViews();
-				                               mPostAdapter.addItem(story);
-			                               }
+																			 //mPostAdapter.addItem(story);
+																		 }
 		                               }));
 	}
 

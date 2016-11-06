@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android = "http://schemas.android.com/apk/res/android">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="1dp"
+    android:layout_height="1dp"
+    />
+    <!--<layout xmlns:android = "http://schemas.android.com/apk/res/android">-->
 
 
-	<data>
+    <!--<data>-->
 
 
-	<variable
-		name = "fragViewModel" type = "com.nullcognition.practice00.FragViewModel"
-		/>
+    <!--<variable-->
+    <!--name = "fragViewModel" type = "com.nullcognition.practice00.FragViewModel"-->
+    <!--/>-->
 
-		<variable
-			name = "ret" type = "com.nullcognition.practice00.Retainable"
-			/>
-	</data>
+    <!--<variable-->
+    <!--name = "ret" type = "com.nullcognition.practice00.Retainable"-->
+    <!--/>-->
+    <!--</data>-->
 
-	<LinearLayout
-		android:layout_height = "match_parent"
-		android:layout_width = "match_parent"
-		android:orientation = "vertical"
-		>
+    <!--<LinearLayout-->
+    <!--android:layout_height = "match_parent"-->
+    <!--android:layout_width = "match_parent"-->
+    <!--android:orientation = "vertical"-->
+    <!--&gt;-->
 
-		<TextView
-			android:layout_height = "wrap_content"
-			android:layout_width = "wrap_content"
-			android:text = "@{String.valueOf(ret.state)}"
-			/>
+    <!--<TextView-->
+    <!--android:layout_height = "wrap_content"-->
+    <!--android:layout_width = "wrap_content"-->
+    <!--android:text = "@{String.valueOf(ret.state)}"-->
+    <!--/>-->
 
-		<Button
-			android:layout_height = "wrap_content"
-			android:layout_width = "wrap_content"
-			android:text = "From Button Click Through View Model"
-			android:onClick = "@{fragViewModel.fromButtonClick}"
-			/>
+    <!--<Button-->
+    <!--android:layout_height = "wrap_content"-->
+    <!--android:layout_width = "wrap_content"-->
+    <!--android:text = "From Button Click Through View Model"-->
+    <!--android:onClick = "@{fragViewModel.fromButtonClick}"-->
+    <!--/>-->
 
-	</LinearLayout>
-</layout>
+    <!--</LinearLayout>-->
+    <!--</layout>-->

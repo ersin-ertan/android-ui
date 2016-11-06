@@ -1,3 +1,4 @@
 include ':googledatabinding', ':effectiveandroidui', ':mosby', ':practice00', ':joebirchmvvm',
+    ':fastlayout',
     ':svg',
     ':googledatabinding01', ':widgets', ':widgetswithcontentproviders', ':fastlayoutconductor'

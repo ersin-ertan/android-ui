@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/effectiveandroidui" />
+            <option value="$PROJECT_DIR$/fastlayout" />
             <option value="$PROJECT_DIR$/fastlayoutconductor" />
             <option value="$PROJECT_DIR$/googledatabinding" />
             <option value="$PROJECT_DIR$/googledatabinding01" />

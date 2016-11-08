@@ -11,11 +11,20 @@
 
     >
   <ImageView
+      android:id="@+id/ic_waxxi"
       app:layout_heightPercent="18%"
       app:layout_marginLeftPercent="26%"
       app:layout_marginTopPercent="22%"
       app:layout_widthPercent="48%"
       app:srcCompat="@drawable/bake_trans"
+      />
+
+  <ImageView
+      android:id="@+id/bg_car"
+      app:layout_heightPercent="60%"
+      app:layout_marginTopPercent="50%"
+      app:layout_widthPercent="100%"
+      app:srcCompat="@drawable/car"
       />
 
 </android.support.percent.PercentFrameLayout>

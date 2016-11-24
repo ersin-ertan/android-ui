@@ -3,6 +3,6 @@
   <color name="colorPrimary">#3F51B5</color>
   <color name="colorPrimaryDark">#303F9F</color>
   <color name="colorAccent">#FF4081</color>
-  <color name="topGradient">#FFAA00</color>
-  <color name="botGradient">#D8000000</color>
+  <color name="topGradient">#8a8a8a</color>
+  <color name="botGradient">#252525</color>
 </resources>

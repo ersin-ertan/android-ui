@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 
 
 android {
@@ -28,7 +27,7 @@ dependencies {
   compile 'com.android.support:appcompat-v7:' + rootProject.ext.appcompat7_v
   compile 'com.android.support:support-v4:' + rootProject.ext.appcompat7_v
 
-  apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
+  annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
   compile 'com.google.dagger:dagger:' + rootProject.ext.dagger2_v
   compile 'javax.annotation:javax.annotation-api:1.2'
 

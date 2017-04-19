@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+  compileSdkVersion 25
+  buildToolsVersion "25.0.2"
+
+  defaultConfig {
+    applicationId "com.nullcognition.litho"
+    minSdkVersion 19
+    targetSdkVersion 25
+    versionCode 1
+    versionName "1.0"
+
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+//  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//    exclude group: 'com.android.support', module: 'support-annotations'
+//  })
+  compile 'com.android.support:appcompat-v7:25.3.1'
+//  testCompile 'junit:junit:4.12'
+  compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+  // Litho
+  compile 'com.facebook.litho:litho-core:0.1.0'
+  compile 'com.facebook.litho:litho-widget:0.1.0'
+  provided 'com.facebook.litho:litho-annotations:0.1.0'
+
+  annotationProcessor 'com.facebook.litho:litho-processor:0.1.0'
+
+  // SoLoader
+  compile 'com.facebook.soloader:soloader:0.1.0+'
+
+  // Optional
+  // For debugging
+  debugCompile 'com.facebook.litho:litho-stetho:0.1.0'
+
+  // For integration with Fresco
+  debugCompile 'com.facebook.litho:litho-fresco:0.1.0'
+
+  // For testing
+//  testCompile 'com.facebook.litho:litho-testing:0.1.0'
+}

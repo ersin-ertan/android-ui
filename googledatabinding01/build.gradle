@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.android.databinding'
-apply plugin: 'com.neenbedankt.android-apt'
 
 
 android{
@@ -34,9 +33,9 @@ dependencies{
 
 //	compile 'com.github.fabioCollini.mv2m:mv2mrx:0.3.1'
 	compile 'com.sora.util.akatsuki:akatsuki-api:'+ rootProject.ext.akatsuki_v
-	apt 'com.sora.util.akatsuki:akatsuki-compiler:'+ rootProject.ext.akatsuki_v
+	annotationProcessor 'com.sora.util.akatsuki:akatsuki-compiler:'+ rootProject.ext.akatsuki_v
 
 	compile 'com.hannesdorfmann.parcelableplease:annotation:' + rootProject.ext.parcelable_v
-	apt 'com.hannesdorfmann.parcelableplease:processor:'+ rootProject.ext.parcelable_v
+	annotationProcessor 'com.hannesdorfmann.parcelableplease:processor:'+ rootProject.ext.parcelable_v
 
 }

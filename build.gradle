@@ -5,12 +5,9 @@ buildscript {
         jcenter()
     }
     dependencies {
-      classpath 'com.android.tools.build:gradle:2.3.0-alpha1'
+      classpath 'com.android.tools.build:gradle:2.4.0-alpha6'
         classpath 'io.fabianterhorst:fastlayout-gradle-plugin:0.0.2-alpha37'
 
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-
-        classpath 'me.tatarka:gradle-retrolambda:3.2.3'
 
         classpath "com.android.databinding:dataBinder:1.0-rc2" // use for google databinding
 //		classpath "com.android.databinding:dataBinder:1.0-rc3" // not working
@@ -37,7 +34,7 @@ ext{
     minSdk = 15
     targetSdk = 23
     compileSdkVersion = 23
-    buildToolsVersion = '25.0.0'
+    buildToolsVersion = '25.0.2'
 
     javaSourceCompatibility = org.gradle.api.JavaVersion.VERSION_1_8
     javaTargetCompatibility = org.gradle.api.JavaVersion.VERSION_1_8

@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'me.tatarka.retrolambda'
+
 
 
 android{
@@ -43,12 +42,12 @@ dependencies{
 	compile 'io.reactivex:rxandroid:' + rootProject.ext.rxandroid_v
 	compile 'io.reactivex:rxjava:' + rootProject.ext.rxjava_v
 
-	apt 'com.hannesdorfmann.annotatedadapter:processor:1.1.1'
+	annotationProcessor 'com.hannesdorfmann.annotatedadapter:processor:1.1.1'
 	compile 'com.hannesdorfmann.annotatedadapter:annotation:1.1.1'
 	compile 'com.hannesdorfmann.annotatedadapter:support-recyclerview:1.1.1'
 
 	compile 'com.google.dagger:dagger:' + rootProject.ext.dagger2_v
-	apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
+	annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
 	compile 'javax.annotation:javax.annotation-api:1.2'
 
 	compile 'com.squareup.okhttp:okhttp:' + rootProject.ext.okhttp_v

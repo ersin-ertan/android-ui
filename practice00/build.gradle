@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 apply plugin: 'com.android.databinding'
 
 android{
@@ -31,15 +30,15 @@ dependencies{
 	compile 'com.squareup.moshi:moshi:' + rootProject.ext.moshi_v
 
 	compile 'com.sora.util.akatsuki:akatsuki-api:' + rootProject.ext.akatsuki_v
-	apt 'com.sora.util.akatsuki:akatsuki-compiler:'+ rootProject.ext.akatsuki_v
+	annotationProcessor 'com.sora.util.akatsuki:akatsuki-compiler:'+ rootProject.ext.akatsuki_v
 
 	compile 'com.hannesdorfmann.parcelableplease:annotation:'+ rootProject.ext.parcelable_v
-	apt 'com.hannesdorfmann.parcelableplease:processor:' + rootProject.ext.parcelable_v
+	annotationProcessor 'com.hannesdorfmann.parcelableplease:processor:' + rootProject.ext.parcelable_v
 
 	compile 'com.hannesdorfmann.fragmentargs:annotation:2.1.2'
-	apt 'com.hannesdorfmann.fragmentargs:processor:2.1.2'
+	annotationProcessor 'com.hannesdorfmann.fragmentargs:processor:2.1.2'
 
-	apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
+	annotationProcessor 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2_v
 	compile 'com.google.dagger:dagger:' + rootProject.ext.dagger2_v
 	compile 'javax.annotation:javax.annotation-api:1.2'
 

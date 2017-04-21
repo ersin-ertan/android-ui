@@ -12,10 +12,10 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     //setContentView(R.layout.activity_main);
 
-    ComponentContext cc = new ComponentContext(this);
+    final ComponentContext c = new ComponentContext(this);
 
-    LithoView lithoView =
-        LithoView.create(this, Text.create(cc).text("TEXT").textSizeDip(24).build());
+    final LithoView lithoView = LithoView.create(this /* context */,
+        Text.create(c).text("Hello, World!").textSizeDip(298).build());
 
     setContentView(lithoView);
   }

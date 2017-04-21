@@ -110,28 +110,28 @@
     <orderEntry type="library" exported="" name="stetho-1.5.0" level="project" />
     <orderEntry type="library" exported="" name="bolts-tasks-1.4.0" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="litho-widget-0.2.0" level="project" />
     <orderEntry type="library" exported="" name="fbcore-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="drawee-1.2.0" level="project" />
     <orderEntry type="library" exported="" name="yoga-1.4.2" level="project" />
-    <orderEntry type="library" exported="" name="litho-widget-0.1.0" level="project" />
     <orderEntry type="library" exported="" name="jsr305-2.0.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-utils-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="soloader-0.2.0" level="project" />
     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.2" level="project" />
     <orderEntry type="library" exported="" name="staticlayout-proxy-1.1" level="project" />
-    <orderEntry type="library" exported="" name="soloader-0.1.0" level="project" />
     <orderEntry type="library" exported="" name="imagepipeline-1.2.0" level="project" />
-    <orderEntry type="library" exported="" name="litho-stetho-0.1.0" level="project" />
+    <orderEntry type="library" exported="" name="litho-stetho-0.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="litho-fresco-0.1.0" level="project" />
-    <orderEntry type="library" exported="" name="litho-core-0.1.0" level="project" />
+    <orderEntry type="library" exported="" name="litho-fresco-0.2.0" level="project" />
+    <orderEntry type="library" exported="" name="litho-core-0.2.0" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-vector-drawable-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="litho-annotations-0.2.0" level="project" />
     <orderEntry type="library" exported="" name="support-compat-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="animated-vector-drawable-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="litho-annotations-0.1.0" level="project" />
   </component>
 </module>
